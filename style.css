@@ -1,0 +1,371 @@
+/* ===============================
+   GLOBAL RESET
+================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f5f6fa;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ===============================
+   CONTAINER
+================================= */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ===============================
+   LOADER
+================================= */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader-circle {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #eee;
+    border-top: 5px solid #8B0000;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* ===============================
+   HEADER / NAVBAR
+================================= */
+.header {
+    position: sticky;
+    top: 0;
+    background: rgba(139, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #FFD700;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===============================
+   HERO SECTION
+================================= */
+.hero {
+    height: 85vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('../images/flour-bg.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===============================
+   BUTTONS
+================================= */
+.btn {
+    padding: 12px 25px;
+    background: #FFD700;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #FFD700;
+    color: #FFD700;
+}
+
+.btn-outline:hover {
+    background: #FFD700;
+    color: #000;
+}
+
+/* ===============================
+   SECTIONS
+================================= */
+.section {
+    padding: 70px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #8B0000;
+}
+
+.bg-light {
+    background: #f9f9f9;
+}
+
+/* ===============================
+   CARDS GRID
+================================= */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* ===============================
+   CARD DESIGN (3D Modern)
+================================= */
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* ===============================
+   CARD IMAGES
+================================= */
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* ===============================
+   SIMPLE CARD
+================================= */
+.simple-card {
+    background: linear-gradient(145deg, #ffffff, #f1f1f1);
+}
+
+/* ===============================
+   ACHIEVEMENT CARD
+================================= */
+.achievement-card .counter {
+    font-size: 45px;
+    font-weight: bold;
+    color: #8B0000;
+}
+
+.achievement-card p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* ===============================
+   CTA SECTION
+================================= */
+.cta {
+    background: linear-gradient(45deg, #8B0000, #b22222);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.cta h2 {
+    margin-bottom: 25px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 12px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Map Section */
+.map-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.map-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* ===============================
+   FOOTER
+================================= */
+.footer {
+    background: #111;
+    color: #ddd;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-logo img {
+    height: 50px;
+   width: auto;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================= */
+@media (max-width: 768px) {
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background: #8B0000;
+        width: 200px;
+        padding: 20px;
+        transition: 0.3s;
+    }
+
+    .nav-links.show {
+        right: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .card img {
+        height: 180px;
+    }
+}
+@media (max-width: 768px) {
+    .logo img {
+        height: 40px;
+    }
+
+    .footer-logo img {
+        height: 45px;
+    }
+}
+
