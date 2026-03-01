@@ -1,2 +1,2 @@
-# project
-For project use 
+# Project
+Dark Royal Blue + Cyber Glow (balanced modern)
